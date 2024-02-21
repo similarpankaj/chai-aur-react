@@ -7,8 +7,12 @@ function App() {
 // let counter = 15
 
 const addValue = () => {
-  setCounter(counter+1)
-  console.log('clicked',counter)
+// setCounter(counter+1) //if we do this 4 times it only gets updated one times coz fiver send in the bunch, to do it 4 times we need to do below approach
+  setCounter((prevCounter) => prevCounter+1)
+  setCounter((prevCounter) => prevCounter+1)
+  setCounter((prevCounter) => prevCounter+1)
+  setCounter((prevCounter) => prevCounter+1)
+  
 }
 
 const removeValue = () => {
